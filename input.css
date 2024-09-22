@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar-bg-blur {
+  @apply backdrop-blur-md bg-clr-ultra-pure-white/85;
+}
+
 .kanak {
-  border: 1px solid red;
+  border: 1px solid blue;
 }
 
 @layer components {
