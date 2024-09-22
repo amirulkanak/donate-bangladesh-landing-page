@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.kanak {
+  border: 1px solid red;
+}
+
 @layer components {
   .wrapper {
-    @apply max-w-[1170px] mx-auto;
+    @apply max-w-[72.8125rem] mx-auto pc:px-0 px-4;
   }
 }
 

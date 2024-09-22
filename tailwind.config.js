@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./**/*.html'],
+  content: ['./*.html'],
   theme: {
     extend: {
       // Custom media queries screen size
@@ -14,7 +14,9 @@ module.exports = {
       },
       // Custom colors
       colors: {
-        'clr-gray-1': '#E9E9E9',
+        'clr-ultra-pure-white': '#F9F7F3',
+        'clr-inchworm': '#B4F461',
+        'clr-dreamless-sleep': '#111111',
       },
       backgroundImage: {},
     },
