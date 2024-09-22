@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       // Custom media queries screen size
       screens: {
+        xs: '340px',
         tab: '834px',
         pc: '1170px',
       },
