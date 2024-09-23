@@ -94,12 +94,12 @@ donateBtns.forEach(function (btn) {
   });
 });
 
-// Helper Functions
+// Helper Function
 function setInnerTextByEl(element, text) {
   element.innerText = text;
 }
 
-// Modal Functions
+// Modal Function
 function showModal(modalId, closeId) {
   const modalOpen = document.getElementById(modalId);
   const modalClose = document.getElementById(closeId);
@@ -109,9 +109,8 @@ function showModal(modalId, closeId) {
   });
 }
 
-// History Functions
+// History Function
 function createHistoryCard(title, amount) {
-  // const newTitle = `${amount} TK ${tittle}`;
   const donatedAt = new Date().toLocaleString();
   const historyCard = document.createElement('div');
   historyCard.classList.add('history-card');

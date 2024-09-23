@@ -19,7 +19,6 @@ module.exports = {
         'clr-inchworm': '#B4F461',
         'clr-dreamless-sleep': '#111111',
       },
-      backgroundImage: {},
     },
   },
   plugins: [require('daisyui')],
