@@ -6,6 +6,14 @@
   @apply backdrop-blur-md bg-clr-ultra-pure-white/85;
 }
 
+.dh-btn-active {
+  @apply bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30;
+}
+
+.dh-btn-inactive {
+  @apply bg-white text-clr-dreamless-sleep/70 hover:bg-clr-inchworm/70 border border-solid border-clr-dreamless-sleep/30 hover:border-clr-dreamless-sleep/30;
+}
+
 .kanak {
   border: 1px solid blue;
 }
