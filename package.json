@@ -1,8 +1,8 @@
 {
-  "name": "rinterio-landing-page-ph",
+  "name": "donate-bangladesh-landing-page",
   "version": "1.0.0",
-  "description": "A house designing landing page template",
-  "main": "n",
+  "description": "Donation calculation template",
+  "main": "index.html",
   "scripts": {
     "dev": "tailwindcss -i ./input.css -o ./assets/css/style.css --watch"
   },
