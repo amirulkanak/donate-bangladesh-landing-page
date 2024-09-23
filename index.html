@@ -33,7 +33,7 @@
     ======================================================== -->
   </head>
   <body class="flex flex-col min-h-screen">
-    <header id="header" class="sticky top-0">
+    <header id="header" class="sticky top-0 z-10">
       <!-- Navigation -->
       <nav id="nav" class="bg-clr-ultra-pure-white">
         <div
@@ -41,7 +41,7 @@
           <!-- blog button -->
           <a
             href="blog.html"
-            class="da-btn order-3 md:order-1 w-[6.875rem] bg-clr-inchworm rounded-lg text-clr-dreamless-sleep text-[1.25rem] leading-[1.563rem] font-semibold hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+            class="da-btn no-animation order-3 md:order-1 w-[6.875rem] bg-clr-inchworm rounded-lg text-clr-dreamless-sleep text-[1.25rem] leading-[1.563rem] font-semibold hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
             Blog
           </a>
 
@@ -65,7 +65,7 @@
               alt="Dollar coin" />
             <div
               class="text-clr-dreamless-sleep/70 text-[1.25rem] leading-[1.563rem] font-medium">
-              <span>5000</span> BDT
+              <span id="user-balance">5000</span> BDT
             </div>
           </div>
         </div>
@@ -79,14 +79,14 @@
         <!-- donation btn -->
         <button
           id="donation-btn"
-          class="da-btn w-[9.8125rem] h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold dh-btn-active">
+          class="da-btn no-animation w-[9.8125rem] h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold dh-btn-active">
           Donation
         </button>
 
         <!-- history btn -->
         <button
           id="history-btn"
-          class="da-btn w-[9.8125rem] h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-medium dh-btn-inactive">
+          class="da-btn no-animation w-[9.8125rem] h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-medium dh-btn-inactive">
           History
         </button>
       </div>
@@ -111,10 +111,11 @@
                   class="size-7"
                   src="./assets/icons/coin.png"
                   alt="Dollar coin" />
-                <span>0</span> BDT
+                <span class="donation-amount">10000</span>
+                BDT
               </div>
               <h2
-                class="text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
+                class="donation-tittle text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
                 Donate for Flood at Noakhali, Bangladesh
               </h2>
               <p
@@ -129,9 +130,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
+                class="donation-input da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
               <button
-                class="da-btn w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+                class="donate-btn da-btn no-animation w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
                 Donate Now
               </button>
             </div>
@@ -152,10 +153,11 @@
                   class="size-7"
                   src="./assets/icons/coin.png"
                   alt="Dollar coin" />
-                <span>0</span> BDT
+                <span class="donation-amount">30000</span>
+                BDT
               </div>
               <h2
-                class="text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
+                class="donation-tittle text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
                 Donate for Flood Relief in Feni, Bangladesh
               </h2>
               <p
@@ -172,9 +174,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
+                class="donation-input da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
               <button
-                class="da-btn w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+                class="donate-btn da-btn no-animation w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
                 Donate Now
               </button>
             </div>
@@ -195,10 +197,11 @@
                   class="size-7"
                   src="./assets/icons/coin.png"
                   alt="Dollar coin" />
-                <span>0</span> BDT
+                <span class="donation-amount">20000</span>
+                BDT
               </div>
               <h2
-                class="text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
+                class="donation-tittle text-[1.25rem] leading-[1.875rem] font-bold text-clr-dreamless-sleep">
                 Aid for Injured in the Quota Movement
               </h2>
               <p
@@ -216,9 +219,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
+                class="donation-input da-input da-input-bordered rounded-lg w-full h-[3.5rem]" />
               <button
-                class="da-btn w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+                class="donate-btn da-btn no-animation w-full h-[3.5625rem] rounded-lg text-[1.25rem] leading-[1.563rem] font-semibold bg-clr-inchworm text-clr-dreamless-sleep hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
                 Donate Now
               </button>
             </div>
@@ -227,63 +230,27 @@
       </section>
 
       <!-- Donation History -->
-      <section id="history-section" class="hidden space-y-6">
-        <div
-          class="wrapper p-3 sm:p-5 pc:p-8 flex flex-col gap-4 bg-white rounded-2xl border border-solid border-clr-dreamless-sleep/10 shadow-xl">
-          <h2
-            class="text-clr-dreamless-sleep text-[1.25rem] font-bold leading-[1.875rem]">
-            <span>96500</span> Taka is Donated for famine-2024 at Feni,
-            Bangladesh
-          </h2>
-          <p
-            class="text-clr-dreamless-sleep/70 text-[1rem] font-light leading-[1.625rem]">
-            Date :
-            <span
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-              Time)</span
-            >
-          </p>
-        </div>
-        <div
-          class="wrapper p-3 sm:p-5 pc:p-8 flex flex-col gap-4 bg-white rounded-2xl border border-solid border-clr-dreamless-sleep/10 shadow-xl">
-          <h2
-            class="text-clr-dreamless-sleep text-[1.25rem] font-bold leading-[1.875rem]">
-            <span>96500</span> Taka is Donated for famine-2024 at Feni,
-            Bangladesh
-          </h2>
-          <p
-            class="text-clr-dreamless-sleep/70 text-[1rem] font-light leading-[1.625rem]">
-            Date :
-            <span
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-              Time)</span
-            >
-          </p>
-        </div>
-      </section>
+      <section id="history-section" class="hidden space-y-6"></section>
 
       <!-- Confirmation Modal -->
-      <!-- Open the modal using ID.showModal() method -->
-      <!-- <button class="da-btn" onclick="confirmationmessage.showModal()">
-        open modal
-      </button> -->
-      <dialog id="confirmation-message" class="da-modal">
+      <dialog id="success-modal" class="da-modal">
         <div
           class="da-modal-box max-w-[36.5rem] flex flex-col items-center gap-8">
-          <h3 class="text-5xl font-bold">Congrates!</h3>
+          <h3 class="text-3xl sm:text-5xl font-bold">Congrates!</h3>
           <img
             class="size-12"
             src="./assets/icons/coin.png"
             alt="Dollar coin" />
-          <p class="text-[1.25rem] leading-[1.625rem]">
+          <p class="text-center text-[1.25rem] leading-[1.625rem]">
             You Have Donated for Humankind
           </p>
-          <p class="text-3xl font-bold">Successfully</p>
+          <p class="text-2xl sm:text-3xl font-bold">Successfully</p>
           <div class="da-modal-action">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="da-btn">close confirmation</button>
-            </form>
+            <button
+              id="close-success-modal"
+              class="da-btn no-animation hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+              close confirmation
+            </button>
           </div>
         </div>
       </dialog>

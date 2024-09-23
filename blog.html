@@ -33,7 +33,7 @@
     ======================================================== -->
   </head>
   <body class="flex flex-col min-h-screen">
-    <header id="header" class="sticky top-0">
+    <header id="header" class="sticky top-0 z-10">
       <!-- Navigation -->
       <nav id="nav" class="bg-clr-ultra-pure-white">
         <div
@@ -41,7 +41,7 @@
           <!-- blog button -->
           <a
             href="index.html"
-            class="da-btn order-3 md:order-1 w-[6.875rem] bg-clr-inchworm rounded-lg text-clr-dreamless-sleep text-[1.25rem] leading-[1.563rem] font-semibold hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
+            class="da-btn no-animation order-3 md:order-1 w-[6.875rem] bg-clr-inchworm rounded-lg text-clr-dreamless-sleep text-[1.25rem] leading-[1.563rem] font-semibold hover:bg-clr-inchworm/70 hover:border-clr-dreamless-sleep/30">
             Home
           </a>
 
@@ -75,16 +75,17 @@
     <main>
       <!-- Q and A -->
       <section class="wrapper">
-        <h2 class="mt-6 text-5xl font-bold">Important FAQ</h2>
+        <h2 class="mt-6 text-4xl md:text-5xl font-bold">Important FAQ</h2>
         <div class="mt-8 da-join da-join-vertical w-full shadow-md">
           <div
             class="da-collapse da-collapse-arrow da-join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" checked="checked" />
-            <div class="da-collapse-title text-2xl font-semibold my-4">
+            <div
+              class="da-collapse-title text-lg md:text-2xl font-semibold my-4">
               What is the Document Object Model (DOM)?
             </div>
             <div class="da-collapse-content">
-              <p class="text-pretty text-lg font-light">
+              <p class="text-pretty text-base md:text-lg font-light">
                 <strong>The Document Object Model (DOM)</strong> is a
                 programming interface for web documents. It represents the
                 structure of a webpage as a tree of objects, allowing scripts
@@ -96,41 +97,46 @@
               </p>
             </div>
           </div>
+
           <div
             class="da-collapse da-collapse-arrow da-join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
-            <div class="da-collapse-title text-2xl font-semibold my-4">
+            <div
+              class="da-collapse-title text-lg md:text-2xl font-semibold my-4">
               How do you select an element from the DOM?
             </div>
+
             <div class="da-collapse-content">
-              <p class="text-lg font-light">
+              <p class="text-balance text-base md:text-lg font-light">
                 We can select an element from the DOM using JavaScript methods
-                like <br /><strong>getElementById()</strong> (e.g.,
-                <code class="text-blue-800"
-                  >document.getElementById('elementID');</code
-                >), <br /><strong>getElementsByClassName()</strong> (e.g.,
-                <code class="text-blue-800"
-                  >document.getElementsByClassName('className');</code
-                >), <br /><strong>querySelector()</strong> (e.g.,
-                <code class="text-blue-800"
-                  >document.querySelector('.className');</code
-                >) or <br /><strong>querySelectorAll()</strong> (e.g.,
-                <code class="text-blue-800"
-                  >document.querySelectorAll('.className');</code
-                >), depending on whether we are targeting an ID, class, tag, or
-                CSS selector.
+                like <strong>getElementById()</strong>,
+                <strong>getElementsByClassName()</strong>,
+                <strong>querySelector()</strong> or
+                <strong>querySelectorAll()</strong>, depending on whether we are
+                targeting an ID, class, tag, or CSS selector.
+                <span class="hidden text-blue-800 min-[475px]:inline"
+                  >(e.g.,
+                  <code>
+                    document.getElementById('elementID');
+                    document.getElementsByClassName('className');
+                    document.querySelector('.className');
+                    document.querySelectorAll('.className'); </code
+                  >)
+                </span>
               </p>
             </div>
           </div>
+
           <div
             class="da-collapse da-collapse-arrow da-join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
-            <div class="da-collapse-title text-2xl font-semibold my-4">
+            <div
+              class="da-collapse-title text-lg md:text-2xl font-semibold my-4">
               What is event delegation in the context of the DOM, and why is it
               useful?
             </div>
             <div class="da-collapse-content">
-              <p class="text-pretty text-lg font-light">
+              <p class="text-pretty text-base md:text-lg font-light">
                 <strong>Event delegation</strong> is a technique where a single
                 event listener is added to a parent element to manage events for
                 its child elements. It's useful because it improves performance,
@@ -139,15 +145,17 @@
               </p>
             </div>
           </div>
+
           <div
             class="da-collapse da-collapse-arrow da-join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" />
-            <div class="da-collapse-title text-2xl font-semibold my-4">
+            <div
+              class="da-collapse-title text-lg md:text-2xl font-semibold my-4">
               How do you manipulate an element's attributes and styles using the
               DOM?
             </div>
             <div class="da-collapse-content">
-              <p class="text-pretty text-lg font-light">
+              <p class="text-pretty text-base md:text-lg font-light">
                 We can manipulate an element's attributes using
                 <strong>setAttribute()</strong>
                 (e.g.,
@@ -167,5 +175,18 @@
       </section>
     </main>
     <footer class="bg-clr-ultra-pure-white h-28 mt-auto"></footer>
+    <script>
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('header');
+        const nav = document.getElementById('nav');
+        if (window.scrollY > 20) {
+          header.classList.add('navbar-bg-blur');
+          nav.classList.remove('bg-clr-ultra-pure-white');
+        } else {
+          header.classList.remove('navbar-bg-blur');
+          nav.classList.add('bg-clr-ultra-pure-white');
+        }
+      });
+    </script>
   </body>
 </html>
